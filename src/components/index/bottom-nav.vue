@@ -1,10 +1,32 @@
 <template>
   <div class="bottom-nav">
     <div class="indexnav">
-      <a v-for="(navlist,index) in navlists">
-        <router-link :to="navlist.src">
-          <img :src="navlist.img" alt="">
-          <div>{{navlist.txt}}</div>
+      <a>
+        <router-link to="/">
+          <img src="/static/index/home-on.png" alt="">
+          <div>首页</div>
+        </router-link>
+      </a>
+      <a>
+        <router-link to="/CustomTravel">
+          <img src="/static/index/trip-off.png" alt="">
+          <div>定制旅行</div>
+        </router-link>
+      </a>
+      <a>
+          <img src="/static/index/form-onclick.png" alt="" @click="consultingService = true">
+          <div>免费咨询</div>
+      </a>
+      <a>
+        <router-link to="/TravelMall">
+          <img src="/static/index/mall-off.png" alt="">
+          <div>旅行商城</div>
+        </router-link>
+      </a>
+      <a>
+        <router-link to="/RoadBook">
+          <img src="/static/index/guideBook-off.png" alt="">
+          <div>我的路书</div>
         </router-link>
       </a>
     </div>
@@ -13,15 +35,9 @@
 
 <script>
   export default {
-    data () {
+    data(){
       return{
-        navlists:[
-          {img:"/static/index/home-on.png",txt:"首页",src:"/"},
-          {img:"/static/index/trip-off.png",txt:"定制旅行",src:"/CustomTravel"},
-          {img:"/static/index/form-onclick.png",txt:"免费咨询",src:""},
-          {img:"/static/index/mall-off.png",txt:"旅行商城",src:""},
-          {img:"/static/index/guideBook-off.png",txt:"我的路书",src:""},
-        ]
+        consultingService: false
       }
     }
   }

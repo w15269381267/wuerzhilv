@@ -9,7 +9,7 @@
       </a>
       <a>
         <router-link to="/CustomTravel">
-          <img src="/static/index/trip-on.png" alt="">
+          <img src="/static/index/trip-off.png" alt="">
           <div>定制旅行</div>
         </router-link>
       </a>
@@ -21,7 +21,7 @@
       </a>
       <a>
         <router-link to="/TravelMall">
-          <img src="/static/index/mall-off.png" alt="">
+          <img src="/static/index/mall-on.png" alt="">
           <div>旅行商城</div>
         </router-link>
       </a>

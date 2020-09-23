@@ -6,7 +6,7 @@
           <img src="/static/common/logo_uniqueway.png" class="logo_uniqueway">
         </div></el-col>
           <el-col :span="4" :offset="8"><div class="grid-content bg-purple">
-             <input type="button" value="免费咨询" class="consult-btn">
+             <input type="button" value="免费咨询" class="consult-btn" @click="consultingService = true">
           </div></el-col>
           <el-col :span="2" :offset="1"><div class="grid-content bg-purple">
             <el-button size="small" icon="el-icon-s-operation" class="nav-btn" @click="show = !show"></el-button>
@@ -30,6 +30,18 @@
     <div class="all">
       <router-view/>
     </div>
+    <el-dialog
+      title=""
+      :visible.sync="consultingService"
+      width="70%"
+      center class="consultingService">
+      <span class="pc-img"></span>
+      <input type="text" placeholder="填写目的地">
+      <input type="text" placeholder="填写手机号码">
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="consultingService = false" class="consulting">免费咨询</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -39,6 +51,7 @@ export default {
   data(){
     return {
       show:false,
+      consultingService: false,
     }
   }
 }
@@ -92,5 +105,28 @@ export default {
       padding: 0;
     }
   }
+  .consultingService{
+    text-align: center;
+    .pc-img{
+      display: inline-block;
+      width: 100%;
+      height: 140px;
+      background-image: url(/static/index/pc.jpg);
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    input{
+      background-color: #F8F7F2;
+      margin: 0.3125rem 0;
+      width: 100%;
+      height: 40px;
+      border: none;
+      font-size: 1.3625rem;
+    }
+    .consulting{
+      width: 60%;
+    }
+  }
+
 }
 </style>

@@ -35,7 +35,6 @@
     methods:{
       subBtn2 () {
         if (!this.phone2) {
-
           this.$alert("请填写手机号",{
             center:true,
             confirmButtonText:"ok"
