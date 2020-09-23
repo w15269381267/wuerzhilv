@@ -1,0 +1,27 @@
+{
+  "lists":[
+    {
+      "img":"/static/Travel-mall/cherry.png","txt":"樱花"
+    },
+    {
+      "img":"/static/Travel-mall/class-honeymoon.jpg","txt":"蜜月"
+    },
+    {
+      "img":"/static/Travel-mall/class-child.jpg","txt":"亲子"
+    },
+    {
+      "img":"/static/Travel-mall/class-aurora.jpg","txt":"极光"
+    }
+  ],
+  "tables":[
+    {
+      "img":"/static/Travel-mall/4ELvsyNlEaEREe4tfbWDf3BZDdkKVRbc194xYyV2.jpeg","h3":"【欧洲经典游】行走在东欧的童话世界","num":"14899","custom":"589人已定制"
+    },
+    {
+      "img":"/static/Travel-mall/4ELvsyNlEaEREe4tfbWDf3BZDdkKVRbc194xYyV2.jpeg","h3":"【欧洲经典游】行走在东欧的童话世界","num":"14899","custom":"589人已定制"
+    },
+    {
+      "img":"/static/Travel-mall/4ELvsyNlEaEREe4tfbWDf3BZDdkKVRbc194xYyV2.jpeg","h3":"【欧洲经典游】行走在东欧的童话世界","num":"14899","custom":"589人已定制"
+    }
+  ]
+}

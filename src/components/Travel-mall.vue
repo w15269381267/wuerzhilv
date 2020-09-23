@@ -4,17 +4,25 @@
       <img src="/static/Travel-mall/ucPR91Vy3fwe847fKGRCmVVtc4NNOLaEO60Njd2V.jpeg" alt="">
       <nav>
         <div class="nav-img">
-          <div class="travel-nav-img"><img src="/static/Travel-mall/trip.png" alt=""><div>定制旅行</div></div>
+          <router-link to="" class="nav-img-link">
+            <div class="travel-nav-img"><img src="/static/Travel-mall/trip.png" alt=""><div>定制旅行</div></div>
+          </router-link>
+
           <div class="travel-nav-img"><img src="/static/Travel-mall/wedding.png" alt=""><div>海外婚礼</div></div>
           <div class="travel-nav-img"><img src="/static/Travel-mall/air.png" alt=""><div>特惠住宿待定</div></div>
         </div>
         <div class="travel-nav-div"></div>
       </nav>
-      <div class="custom"><img src="/static/Travel-mall/adbanner.png" alt=""></div>
+      <router-link to="/CustomTravel">
+        <div class="custom"><img src="/static/Travel-mall/adbanner.png" alt=""></div>
+      </router-link>
     </header>
     <recommend></recommend>
     <selected></selected>
-
+    <customized></customized>
+    <cheapHotel></cheapHotel>
+    <SpecialAccommodation></SpecialAccommodation>
+    <bottomFform></bottomFform>
     <bottomNav></bottomNav>
   </div>
 </template>
@@ -23,11 +31,19 @@
   import bottomNav from "@/components/Travel-mall/bottom-nav.vue"
   import recommend from "@/components/Travel-mall/recommend.vue"
   import selected from "@/components/Travel-mall/selected.vue"
+  import customized from "@/components/index/customized.vue"
+  import bottomFform from "@/components/index/bottom-form.vue"
+  import cheapHotel from "@/components/Travel-mall/cheap-hotel.vue"
+  import SpecialAccommodation from "@/components/Travel-mall/Special-accommodation.vue"
   export default {
     components:{
       bottomNav,
       recommend,
-      selected
+      selected,
+      customized,
+      bottomFform,
+      cheapHotel,
+      SpecialAccommodation
     }
   }
 </script>
@@ -60,6 +76,10 @@
         position: relative;
         top: -43px;
         .nav-img{
+          .nav-img-link{
+            text-decoration: none;
+            color: black;
+          }
           width: 80%;
           margin: 0 auto;
           display: flex;

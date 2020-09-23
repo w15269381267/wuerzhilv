@@ -66,7 +66,10 @@
           <div class="special">更智能，更懂你。</div>
         </div>
         <div class="free">
-          <span>查看书路</span>
+          <router-link to="/RoadBook" class="free-link">
+            <span>查看书路</span>
+          </router-link>
+
         </div>
       </div>
       <hr>
@@ -230,10 +233,12 @@
     methods:{
       maskTxt () {
         if (this.show==1) {
-          event.path[1].style.transform=`translateY(-60px)`;
+          event.path[1].style.transform="all 2s";
+          event.path[1].style.transform="translateY(-60px)";
           this.show = 2
         }else if(this.show==2){
-          event.path[1].style.transform=`translateY(0px)`;
+          event.path[1].style.transform="all 2s";
+          event.path[1].style.transform="translateY(0px)";
           this.show = 1
         }
       },
@@ -297,6 +302,10 @@
       text-align: center;
       font-size: 1.875rem;
       line-height: 3.125rem;
+      .free-link{
+        color: #63C6C2;
+        text-decoration: none;
+      }
     }
     .mask_box_flex{
       width: 100%;

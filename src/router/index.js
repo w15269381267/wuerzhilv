@@ -4,6 +4,7 @@ import index from '@/components/index'
 import CustomTravel from "@/components/Custom-travel.vue"
 import TravelMall from "@/components/Travel-mall.vue"
 import RoadBook from "@/components/Road-book.vue"
+import honeymoon from "@/components/honeymoon.vue"
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path:"/RoadBook",
       name:"RoadBook",
       component: RoadBook
+    },
+    {
+      path:"/honeymoon",
+      name:"honeymoon",
+      component: honeymoon
     }
   ]
 })

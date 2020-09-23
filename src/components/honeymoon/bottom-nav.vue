@@ -27,7 +27,7 @@
       </a>
       <a>
         <router-link to="/RoadBook">
-          <img src="/static/index/guideBook-on.png" alt="">
+          <img src="/static/index/guideBook-off.png" alt="">
           <div>我的路书</div>
         </router-link>
       </a>
@@ -86,28 +86,3 @@
     }
   }
 </style>
-<style>
-  .el-button{
-    width: 80px;
-    background-color: #5FC6C2 !important;
-    border-radius: 0.9375rem !important;
-  }
-  .el-button span{
-    color: #fff !important;
-  }
-  .el-message-box__content{
-    margin-top: 0.625rem;
-  }
-  .el-message-box__header{
-    display: none;
-  }
-  .el-message-box__message{
-    position: relative;
-    top: 5px;
-  }
-  .el-message-box {
-    width: 200px;
-    height: 90px;
-  }
-</style>
-

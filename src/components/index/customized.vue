@@ -115,8 +115,12 @@
   .el-message-box__header{
     display: none;
   }
+  .el-message-box__message{
+    position: relative;
+    top: 5px;
+  }
   .el-message-box {
     width: 200px;
-    height: 80px;
+    height: 90px;
   }
 </style>

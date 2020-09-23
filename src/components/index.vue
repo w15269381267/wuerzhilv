@@ -5,9 +5,11 @@
       <wc-slide class="swiper"><img src="https://assets.cdn.uniqueway.com/mix/mip/images/home/banner2019-0730.png" alt=""></wc-slide>
     </wc-swiper>
     <nav class="box">
+
       <div class="trip-title">
-        <h2>了解定制旅行</h2>
-        <span></span>
+        <router-link to="/CustomTravel" class="router-link">
+          <h2>了解定制旅行<span></span></h2>
+        </router-link>
       </div>
       <div>好的定制，可以不贵。</div>
       <div class="trip-process">
@@ -36,15 +38,21 @@
         <div>100+专业定制师，为你挖掘更地道有趣的local玩法</div>
       </div>
       <div class="recommend-theme">
-        <div class="honeymoon">
-          蜜月旅行
-        </div>
-        <div class="aurora">
-          极光之旅
-        </div>
-        <div class="family">
-          亲自旅游
-        </div>
+        <router-link to="/honeymoon" class="recommend-theme-link">
+          <div class="honeymoon">
+            蜜月旅行
+          </div>
+        </router-link>
+        <router-link  to="/honeymoon" class="recommend-theme-link">
+          <div class="aurora">
+            极光之旅
+          </div>
+        </router-link>
+        <router-link  to="/honeymoon" class="recommend-theme-link">
+          <div class="family">
+            亲自旅游
+          </div>
+        </router-link>
       </div>
       <div class="customized-selection">
         <div>
@@ -166,6 +174,12 @@
     margin: 0;
     padding: 0;
   }
+  .router-link{
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
   hr{
     border: none;
     width: 100%;
@@ -203,7 +217,9 @@
       display: flex;
       justify-content: space-between;
       span{
-        margin-top: 1.25rem;
+        display: inline-block;
+        float: right;
+        margin-top: 0.3rem;
         width: 2rem;
         height: 2rem;
         background-image: url(/static/index/arrowdoen.png);
@@ -236,7 +252,13 @@
       display: flex;
       justify-content: space-between;
       text-align: center;
-
+      .recommend-theme-link{
+        display: block;
+        width: 30%;
+        &>div{
+          width: 100%;
+        }
+      }
       div{
         margin: 0.625rem auto 0.625rem;
         width: 30%;
