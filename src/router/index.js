@@ -5,6 +5,7 @@ import CustomTravel from "@/components/Custom-travel.vue"
 import TravelMall from "@/components/Travel-mall.vue"
 import RoadBook from "@/components/Road-book.vue"
 import honeymoon from "@/components/honeymoon.vue"
+import selected from "@/components/selected.vue"
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path:"/honeymoon",
       name:"honeymoon",
       component: honeymoon
+    },
+    {
+      path:"/selected",
+      name:"selected",
+      component: selected
     }
   ]
 })

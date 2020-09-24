@@ -75,6 +75,9 @@
       background-color: #F9F9F6;
       position: relative;
       top: 1.25rem;
+      h2{
+        color: #544641;
+      }
       .step{
         display: flex;
         justify-content: space-around;
@@ -130,5 +133,29 @@
     display: flex;
     justify-content: space-around;
     background-color: #544641;
+  }
+</style>
+<style>
+  .el-button{
+    width: 80px;
+    background-color: #5FC6C2 !important;
+    border-radius: 0.9375rem !important;
+  }
+  .el-button span{
+    color: #fff !important;
+  }
+  .el-message-box__content{
+    margin-top: 0.625rem;
+  }
+  .el-message-box__header{
+    display: none;
+  }
+  .el-message-box__message{
+    position: relative;
+    top: 5px;
+  }
+  .el-message-box {
+    width: 200px;
+    height: 90px;
   }
 </style>

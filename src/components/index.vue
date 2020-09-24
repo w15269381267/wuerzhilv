@@ -57,20 +57,22 @@
       <div class="customized-selection">
         <div>
           <div class="route-list" v-for="list in lists">
-            <img :src="list.img" alt="">
-            <div class="txt">
-              <h4>{{list.h4}}</h4>
-              <h3 class="text">{{list.h3}}</h3>
-              <div>{{list.txt}}</div>
-            </div>
-            <div class="footer">
-              <span>
-                <span class="rmb">￥</span>
-                <span class="highlight">{{list.highlight}}</span>
-                 /人起
-                <span class="number">{{list.number}}</span>
-              </span>
-            </div>
+            <router-link to="/selected" style="display: block;">
+              <img :src="list.img" alt="">
+              <div class="txt">
+                <h4>{{list.h4}}</h4>
+                <h3 class="text">{{list.h3}}</h3>
+                <div>{{list.txt}}</div>
+              </div>
+              <div class="footer">
+                <span>
+                  <span class="rmb">￥</span>
+                  <span class="highlight">{{list.highlight}}</span>
+                   /人起
+                  <span class="number">{{list.number}}</span>
+                </span>
+              </div>
+            </router-link>
           </div>
         </div>
       </div>
@@ -203,6 +205,7 @@
     width: 95%;
     font-size: 0.625rem;
     margin: 0.3125rem 0.625rem;
+    padding-bottom: 0.625rem;
     h2{
       font-size: 1.5rem;
       margin-top: 1.25rem;

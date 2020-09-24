@@ -75,8 +75,12 @@ export default {
     .nav-btn{
       width: 2.5rem;
       height: 1.875rem;
+      position: relative;
+      right: 10px;
     }
     .consult-btn{
+      position: relative;
+      right: 10px;
       width: 5rem;
       height: 1.875rem;
       outline: none;
