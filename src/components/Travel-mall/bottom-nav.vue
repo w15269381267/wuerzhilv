@@ -15,7 +15,7 @@
       </a>
       <a>
         <router-link to="">
-          <img src="/static/index/form-onclick.png" alt="" @click="consultingService = true">
+          <img src="/static/index/form-onclick.png" alt="" @click="fun">
           <div>免费咨询</div>
         </router-link>
       </a>
@@ -37,9 +37,15 @@
 
 <script>
   export default {
+    inject:['consulting'],
     data(){
       return{
         consultingService: false
+      }
+    },
+    methods:{
+      fun(){
+        this.consulting()
       }
     }
   }
@@ -54,6 +60,7 @@
     z-index: 100;
     position: fixed;
     bottom: 0;
+    color: #918682;
     .indexnav{
       width: 90%;
       margin: auto;
@@ -74,6 +81,7 @@
           margin-top: 0.5rem;
           font-size: 0.875rem;
           height: 1.625rem;
+          color: #918682;
         }
         &:nth-child(3){
           position: relative;

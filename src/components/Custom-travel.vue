@@ -7,7 +7,6 @@
       </div>
     </div>
     <Team></Team>
-
     <bottomNav></bottomNav>
     <content1></content1>
   </div>

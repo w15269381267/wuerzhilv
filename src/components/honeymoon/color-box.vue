@@ -17,7 +17,7 @@
           <p class="introduce">·航行在碧绿纯净的海上，探寻《荒岛余生》风光</p>
           <p class="introduce">·海边四星级度假住宿代订，和爱人听着海浪声入眠</p>
           <p class="person"><span>￥18434</span>/人起</p>
-          <div class="green-bgc">
+          <div class="green-bgc" @click="fun">
             <img src="https://assets.cdn.uniqueway.com/assets/img/welcome/theme/honeymoon/couple_white.png" alt="">
             免费咨询
           </div>
@@ -41,7 +41,7 @@
           <p class="introduce">·蓝顶教堂、最浪漫日落，体验异国的浪漫风情</p>
           <p class="introduce">·入住悬崖洞穴住宿代订，将爱琴海壮丽风光尽收眼底</p>
           <p class="person"><span>￥21880</span>/人起</p>
-          <div class="blue-bgc">
+          <div class="blue-bgc" @click="fun">
             <img src="https://assets.cdn.uniqueway.com/assets/img/welcome/theme/honeymoon/couple_white.png" alt="">
             免费咨询
           </div>
@@ -66,7 +66,7 @@
           <p class="introduce">·穿和服、吃日料、逛寺庙，体验满满的江户风情</p>
           <p class="introduce">·入住纯纯的日风住宿代订，和恋人沉浸在浪漫的和风中</p>
           <p class="person"><span>￥10990</span>/人起</p>
-          <div class="red-bgc">
+          <div class="red-bgc" @click="fun">
             <img src="https://assets.cdn.uniqueway.com/assets/img/welcome/theme/honeymoon/couple_white.png" alt="">
             免费咨询
           </div>
@@ -91,7 +91,7 @@
           <p class="introduce">·穿和服、吃日料、逛寺庙，体验满满的江户风情</p>
           <p class="introduce">·入住峡湾风光住宿代订，在世界最北听涛声入眠是什么体验？</p>
           <p class="person"><span>￥29880</span>/人起</p>
-          <div class="grey-bgc">
+          <div class="grey-bgc" @click="fun">
             <img src="https://assets.cdn.uniqueway.com/assets/img/welcome/theme/honeymoon/couple_white.png" alt="">
             免费咨询
           </div>
@@ -103,7 +103,12 @@
 
 <script>
   export default {
-
+    methods:{
+      fun(){
+        this.consulting()
+      }
+    },
+    inject:['consulting'],
   }
 </script>
 

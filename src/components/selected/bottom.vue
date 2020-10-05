@@ -7,14 +7,19 @@
     </div>
     <div class="consult">
       <img src="https://www.uniqueway.com/mix/mip/images/common/advisory_icon_white.png" alt="">
-      <span>免费咨询</span>
+      <span @click="fun">免费咨询</span>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-
+    inject:['consulting'],
+    methods:{
+      fun(){
+        this.consulting()
+      }
+    }
   }
 </script>
 

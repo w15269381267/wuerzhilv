@@ -35,6 +35,8 @@
     </div>
     <hr>
     <collapse></collapse>
+    <hr>
+    <remarks></remarks>
     <bottomFform></bottomFform>
     <bottom></bottom>
   </div>
@@ -45,6 +47,7 @@
   import evaluate from "@/components/selected/evaluate.vue"
   import bottomFform from "@/components/index/bottom-form.vue"
   import collapse from "@/components/selected/collapse.vue"
+  import remarks from "@/components/selected/remarks.vue"
 
   export default {
     data(){
@@ -56,7 +59,8 @@
       bottom,
       evaluate,
       bottomFform,
-      collapse
+      collapse,
+      remarks
     },
     methods:{
       open () {

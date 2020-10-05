@@ -3,10 +3,13 @@
     <header>
       <el-row type="flex" justify="center" align="middle" class="c1" >
         <el-col :span="8"><div class="grid-content bg-purple">
-          <img src="/static/common/logo_uniqueway.png" class="logo_uniqueway">
+          <router-link to="/">
+            <img src="/static/common/logo_uniqueway.png" class="logo_uniqueway">
+          </router-link>
+
         </div></el-col>
           <el-col :span="4" :offset="8"><div class="grid-content bg-purple">
-             <input type="button" value="免费咨询" class="consult-btn" @click="consultingService = true">
+             <input type="button" value="免费咨询" class="consult-btn" @click="consulting">
           </div></el-col>
           <el-col :span="2" :offset="1"><div class="grid-content bg-purple">
             <el-button size="small" icon="el-icon-s-operation" class="nav-btn" @click="show = !show"></el-button>
@@ -14,16 +17,16 @@
       </el-row>
       <transition name="el-zoom-in-top">
         <div v-show="show" class="transition-box">
-          <div>首页</div>
-          <div>定制旅行</div>
-          <div>路书</div>
-          <div>客户案例</div>
-          <div>客户评价</div>
-          <div>旅行商场</div>
-          <div>旅行公路</div>
-          <div>旅行指南</div>
-          <div>海外婚礼</div>
-          <div>关于我们</div>
+          <router-link to="/"><div @click="show = !show">首页</div></router-link>
+          <router-link to="/CustomTravel"><div @click="show = !show">定制旅行</div></router-link>
+          <router-link to="/RoadBook"><div @click="show = !show">路书</div></router-link>
+          <router-link to="/CustomerCase"><div @click="show = !show">客户案例</div></router-link>
+          <router-link to="/evaluation"><div @click="show = !show">客户评价</div></router-link>
+          <router-link to="/TravelMall"><div @click="show = !show">旅行商场</div></router-link>
+          <router-link to="/strategy"><div @click="show = !show">旅行攻略</div></router-link>
+          <router-link to="/strategy"><div @click="show = !show">旅行指南</div></router-link>
+          <router-link to="/wedding"><div @click="show = !show">海外婚礼</div></router-link>
+          <router-link to="/about"><div @click="show = !show">关于我们</div></router-link>
         </div>
       </transition>
     </header>
@@ -53,12 +56,26 @@ export default {
       show:false,
       consultingService: false,
     }
+  },
+  methods:{
+    consulting(){
+      this.consultingService=true
+    }
+  },
+  provide(){
+    return{
+      consulting:this.consulting
+    }
   }
 }
 </script>
 
 <style lang="less" scoped>
 #app {
+  a{
+    text-decoration: none;
+    color: #000;
+  }
   header{
     background-color: #fff;
     width: 100%;
@@ -131,6 +148,5 @@ export default {
       width: 60%;
     }
   }
-
 }
 </style>

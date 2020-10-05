@@ -7,7 +7,9 @@
     <div class="cheap-hotel-box-flex">
       <div>
         <div class="cheap-hotel-flex-box" v-for="n in 3">
-          <img src="https://images.cdn.uniqueway.com/uploads/2018/01/3138f96f-a605-48ad-94e5-9701a1f23e3d.jpg" alt="">
+          <router-link to="/wedding">
+            <img src="https://images.cdn.uniqueway.com/uploads/2018/01/3138f96f-a605-48ad-94e5-9701a1f23e3d.jpg" alt="">
+          </router-link>
           <div>【新西兰婚礼】登上雪山，在湖泊的见证下，大声说“我愿意”</div>
         </div>
       </div>

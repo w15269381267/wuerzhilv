@@ -54,7 +54,9 @@
     <div class="book">
       <div class="book-box">
         <div class="bookTitle">无二之旅书路案例</div>
-        <div class="lookBook">查看书路</div>
+        <router-link to="/book">
+          <div class="lookBook">查看书路</div>
+        </router-link>
         <img src="http://document.cdn.uniqueway.com/guidebook/1.jpg" alt="">
       </div>
     </div>
@@ -161,6 +163,9 @@
         width: 50%;
         margin: auto;
         text-align: center;
+        a{
+          text-decoration: none;
+        }
         img{
           width: 100%;
         }

@@ -2,7 +2,7 @@
   <!-- 折叠面板 -->
   <div class="collapse">
     <el-collapse accordion>
-      <el-collapse-item v-for="n in 6">
+      <el-collapse-item v-for="n in 6" :key="n.id">
         <template slot="title">
           <span class="collapse-title"><span class="collapse-title-bgc">D{{n}}</span> 万塔(赫尔辛基大区) - 赫尔辛基</span>
         </template>
@@ -50,22 +50,24 @@
           </div>
         </div>
       </el-collapse-item>
-      <el-collapse-item disabled v-for="n in 5">
+      <el-collapse-item disabled v-for="n in 5" :key="n.id">
           <template slot="title">
             <span class="collapse-title"><span class="collapse-title-bgc new-bgc">D{{n+6}}</span> 斯德哥尔摩</span>
-            <span class="collapse-title-btn">免费咨询</span>
+            <span class="collapse-title-btn" @click="fun">免费咨询</span>
           </template>
         </el-collapse-item>
     </el-collapse>
-    <div class="">
-
-    </div>
   </div>
 </template>
 
 <script>
   export default {
-
+    methods:{
+      fun(){
+        this.consulting()
+      }
+    },
+    inject:['consulting'],
   }
 </script>
 

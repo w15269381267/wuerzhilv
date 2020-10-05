@@ -34,17 +34,20 @@
         if (!this.phone2) {
           this.$alert("请填写姓名",{
             center:true,
-            confirmButtonText:"ok"
+            confirmButtonText:"ok",
+            confirmButtonClass:"nobtn"
           })
         }else if (!this.destination2) {
           this.$alert("请填写手机号",{
             center:true,
-            confirmButtonText:"ok"
+            confirmButtonText:"ok",
+            confirmButtonClass:"nobtn"
           })
         }else{
           this.$alert("您的信息提交成功！我们会在一个工作日内联系您",{
             center:true,
-            confirmButtonText:"ok"
+            confirmButtonText:"ok",
+            confirmButtonClass:"nobtn"
           })
         }
       }
@@ -116,7 +119,7 @@
   }
 </style>
 <style>
-  .el-button{
+  .nobtn{
     width: 80px;
     background-color: #5FC6C2 !important;
     border-radius: 0.9375rem !important;

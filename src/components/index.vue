@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-      <a href="">查看更多路线...</a>
+      <router-link to="/strategy">查看更多路线...</router-link>
     </section>
     <hr>
     <section class="box commentSec">
@@ -109,7 +109,7 @@
           </div>
         </div>
       </div>
-      <a href="">查看更多用于评价...</a>
+      <router-link to="/evaluation">查看更多用于评价...</router-link>
     </section>
     <hr>
     <customized></customized>
@@ -132,7 +132,7 @@
           {img:"https://images.cdn.uniqueway.com/uploads/2017/10/af878a3e-a37c-4cd2-9c71-443e96308fd9.jpg!small",
           h4:"穿行北欧三国，和孩子去看极光和圣诞童话",
           h3:"赫尔辛基-罗瓦涅米-萨利瑟尔-伊纳里-伊瓦洛-赫尔辛基-斯德哥尔摩-哥本哈根-欧登塞-哥本哈根",
-          txt:"Tivoli游乐园·小美人鱼·安徒生童话屋",
+          txt:"Tivoli游乐园·小美人鱼·安徒生",
           highlight:"23999",
           number:"150人已定制"
           },
@@ -147,7 +147,7 @@
           {img:"https://images.cdn.uniqueway.com/uploads/2017/10/af878a3e-a37c-4cd2-9c71-443e96308fd9.jpg!small",
           h4:"穿行北欧三国，和孩子去看极光和圣诞童话",
           h3:"赫尔辛基-罗瓦涅米-萨利瑟尔-伊纳里-伊瓦洛-赫尔辛基-斯德哥尔摩-哥本哈根-欧登塞-哥本哈根",
-          txt:"Tivoli游乐园·小美人鱼·安徒生童话屋",
+          txt:"Tivoli游乐园·小美人鱼·安徒生",
           highlight:"23999",
           number:"150人已定制"
           },

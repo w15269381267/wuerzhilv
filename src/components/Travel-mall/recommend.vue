@@ -5,34 +5,43 @@
       <p>100+专业定制师，为你挖掘更地道有趣的local玩法。</p>
       <div class="recommend-box-imgs">
         <div class="recommend-box-imgs-left">
-          <img src="/static/Travel-mall/customizer-card.jpg" alt="">
-          <div class="recommend-box-imgs-txt">
-            <h3>网红打卡地</h3>
-            <div>揭开土耳其神秘面纱，</div>
-            <div>抖音同款get！</div>
-          </div>
+          <router-link to="/selected">
+            <img src="/static/Travel-mall/customizer-card.jpg" alt="">
+            <div class="recommend-box-imgs-txt">
+              <h3>网红打卡地</h3>
+              <div>揭开土耳其神秘面纱，</div>
+              <div>抖音同款get！</div>
+            </div>
+          </router-link>
         </div>
+
         <div class="recommend-box-imgs-right">
           <div class="recommend-right-top">
-            <img src="/static/Travel-mall/customizer-nation.jpg" alt="">
-            <div class="recommend-box-imgs-txt">
-              <h3>欧洲去哪玩</h3>
-              <div>10种玩法，不一样的法意瑞</div>
-            </div>
+            <router-link to="/selected">
+              <img src="/static/Travel-mall/customizer-nation.jpg" alt="">
+              <div class="recommend-box-imgs-txt">
+                <h3>欧洲去哪玩</h3>
+                <div>10种玩法，不一样的法意瑞</div>
+              </div>
+            </router-link>
           </div>
           <div class="recommend-right-bottom">
             <div class="recommend-right-bottom1">
-              <img src="/static/Travel-mall/customizer-cherry.png" alt="">
-              <div class="recommend-box-imgs-txt">
-                <h3>日本</h3>
-                <h3>樱花季</h3>
-              </div>
+              <router-link to="/selected">
+                <img src="/static/Travel-mall/customizer-cherry.png" alt="">
+                <div class="recommend-box-imgs-txt">
+                  <h3>日本</h3>
+                  <h3>樱花季</h3>
+                </div>
+              </router-link>
             </div>
             <div class="recommend-right-bottom2">
-              <img src="/static/Travel-mall/customizer-aurora.jpg" alt="">
-              <div class="recommend-box-imgs-txt">
-                <h3>北极之光</h3>
-              </div>
+              <router-link to="/selected">
+                <img src="/static/Travel-mall/customizer-aurora.jpg" alt="">
+                <div class="recommend-box-imgs-txt">
+                  <h3>北极之光</h3>
+                </div>
+              </router-link>
             </div>
           </div>
         </div>

@@ -30,22 +30,26 @@
         if (!this.destination) {
           this.$alert("目的地不能为空",{
             center:true,
-            confirmButtonText:"ok"
+            confirmButtonText:"ok",
+            confirmButtonClass:"nobtn"
           })
         }else if (!this.use) {
           this.$alert("姓名不能为空",{
             center:true,
-            confirmButtonText:"ok"
+            confirmButtonText:"ok",
+            confirmButtonClass:"nobtn"
           })
         }else if (!this.phone) {
           this.$alert("电话不能为空",{
             center:true,
-            confirmButtonText:"ok"
+            confirmButtonText:"ok",
+            confirmButtonClass:"nobtn"
           })
         }else{
           this.$alert("您的信息提交成功！我们会在一个工作日内联系您",{
             center:true,
-            confirmButtonText:"ok"
+            confirmButtonText:"ok",
+            confirmButtonClass:"nobtn"
           })
         }
       }
@@ -101,7 +105,7 @@
 
 </style>
 <style>
-  .el-button{
+  .nobtn{
     width: 80px;
     background-color: #5FC6C2 !important;
     border-radius: 0.9375rem !important;

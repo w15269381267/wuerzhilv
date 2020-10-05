@@ -15,15 +15,20 @@
       </div>
       <div class="selected-nav-bottom">
           <div v-for=" list in lists" :key="list.id">
-            <img :src="list.img" alt="">
-            <div>{{list.txt}}</div>
+            <router-link to="/honeymoon">
+              <img :src="list.img" alt="">
+              <div>{{list.txt}}</div>
+            </router-link>
           </div>
       </div>
     </nav>
     <div class="selected-mall" v-for=" table in tables" :key="table.id">
       <div class="selected-mall-list">
+        
         <div class="selected-mall-list-img">
-          <img :src="table.img" alt="">
+          <router-link to="/selected">
+            <img :src="table.img" alt="">
+          </router-link>
         </div>
         <div class="selected-mall-list-txt">
           <h3>{{table.h3}}</h3>
@@ -34,7 +39,9 @@
             <div class="custom-mode">{{table.custom}}</div>
           </div>
         </div>
+
       </div>
+
     </div>
     <h4>更多路线</h4>
   </div>

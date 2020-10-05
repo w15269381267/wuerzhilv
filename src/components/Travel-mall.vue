@@ -4,12 +4,12 @@
       <img src="/static/Travel-mall/ucPR91Vy3fwe847fKGRCmVVtc4NNOLaEO60Njd2V.jpeg" alt="">
       <nav>
         <div class="nav-img">
-          <router-link to="" class="nav-img-link">
-            <div class="travel-nav-img"><img src="/static/Travel-mall/trip.png" alt=""><div>定制旅行</div></div>
+          <router-link to="/customized" class="nav-img-link">
+            <div class="travel-nav-img"><img src="/static/Travel-mall/trip.png" alt=""><div>&nbsp;&nbsp;定制旅行</div></div>
           </router-link>
 
-          <div class="travel-nav-img"><img src="/static/Travel-mall/wedding.png" alt=""><div>海外婚礼</div></div>
-          <div class="travel-nav-img"><img src="/static/Travel-mall/air.png" alt=""><div>特惠住宿待定</div></div>
+          <a href="#customized"><div class="travel-nav-img"><img src="/static/Travel-mall/wedding.png" alt=""><div>&nbsp;&nbsp;海外婚礼</div></div></a>
+          <a href="#cheapHotel"><div class="travel-nav-img"><img src="/static/Travel-mall/air.png" alt=""><div>特惠住宿待定</div></div></a>
         </div>
         <div class="travel-nav-div"></div>
       </nav>
@@ -19,8 +19,8 @@
     </header>
     <recommend></recommend>
     <selected></selected>
-    <customized></customized>
-    <cheapHotel></cheapHotel>
+    <customized id="customized"></customized>
+    <cheapHotel id="cheapHotel"></cheapHotel>
     <SpecialAccommodation></SpecialAccommodation>
     <bottomFform></bottomFform>
     <bottomNav></bottomNav>
@@ -53,16 +53,20 @@
     margin: 0;
     padding: 0;
   }
-  h2{
+  .travel-mall{
+    h2{
     margin: 0.625rem 0;
   }
-  p{
+    p{
     font-size: 0.875rem;
     color: #C3BFBE;
     margin: 0.3125rem 0;
   }
-  .travel-mall{
     header{
+      a{
+        text-decoration: none;
+        color: black;
+      }
       margin-top: 3.125rem;
       width: 100%;
       &>img{
