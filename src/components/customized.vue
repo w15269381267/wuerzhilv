@@ -1,4 +1,5 @@
 <template>
+  <!-- 私人定制 -->
   <div class="customized">
     <div class="customized-img">
       <img src="/static/customized/form_bg.jpg" alt="">
@@ -20,6 +21,7 @@
     </div>
     <!-- 视频 留言 -->
     <teamVideo></teamVideo>
+    <!-- 客户评价 -->
     <customerEvaluation></customerEvaluation>
   </div>
 </template>

@@ -39,10 +39,10 @@
       width="70%"
       center class="consultingService">
       <span class="pc-img"></span>
-      <input type="text" placeholder="填写目的地">
-      <input type="text" placeholder="填写手机号码">
+      <input type="text" placeholder="填写目的地" v-model="destination3">
+      <input type="text" placeholder="填写手机号码" v-model="phone3">
       <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="consultingService = false" class="consulting">免费咨询</el-button>
+        <el-button type="primary" @click="subBtn" class="consulting">免费咨询</el-button>
       </span>
     </el-dialog>
   </div>
@@ -55,11 +55,37 @@ export default {
     return {
       show:false,
       consultingService: false,
+      destination3:'',
+      phone3:""
     }
   },
   methods:{
     consulting(){
       this.consultingService=true
+    },
+    subBtn(){
+      if (!this.phone3) {
+        this.$alert("请填写手机号",{
+          center:true,
+          confirmButtonText:"ok",
+          confirmButtonClass:"nobtn"
+        })
+      }else if (!this.destination3) {
+        this.$alert("请填写目的地",{
+          center:true,
+          confirmButtonText:"ok",
+          confirmButtonClass:"nobtn"
+        })
+      }else{
+        this.$alert("您的信息提交成功！我们会在一个工作日内联系您",{
+          center:true,
+          confirmButtonText:"ok",
+          confirmButtonClass:"nobtn",
+        })
+        this.consultingService = false
+        this.phone3=""
+        this.destination3=""
+      }
     }
   },
   provide(){
@@ -133,8 +159,9 @@ export default {
       width: 100%;
       height: 140px;
       background-image: url(/static/index/pc.jpg);
-      -webkit-background-size: contain;
-      background-size: contain;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     input{
       background-color: #F8F7F2;

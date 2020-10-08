@@ -1,7 +1,7 @@
 <template>
   <div class="all">
     <div class="box" >
-      <div class="all-box" v-for="n in txt">
+      <div class="all-box" v-for="(n,i) in txt" :key="n.id">
         <div class="all-box-head">
           <div class="left">
             <img :src="n.head" alt="">
@@ -19,11 +19,11 @@
         </div>
         <div class="all-box-sec">
           <p>{{n.p}}</p>
-          <img :src="n.img" alt="">
+          <img :src="n.img" alt=""  @click="img(n)" :class="{'big':n.checked}" >
         </div>
         <div class="all-box-bottom">
           <div class="time">{{n.time}}</div>
-          <span v-for="n in n.txt">私家定制</span>
+          <span v-for="n in n.txt">{{n}}</span>
         </div>
       </div>
     </div>
@@ -33,6 +33,16 @@
 <script>
   export default{
     props:["txt"],
+    data(){
+      return{
+        changeBig:0
+      }
+    },
+    methods:{
+      img(n){
+        this.$set(n,'checked',!n.checked);
+      }
+    }
   }
 </script>
 
@@ -85,6 +95,9 @@
         }
         img{
           width: 30%;
+        }
+        .big{
+          width: 70%;
         }
       }
       .all-box-bottom{

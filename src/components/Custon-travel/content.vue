@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="free">
+      <div class="free" @click="fun">
         <span>免费咨询</span>
       </div>
       <hr>
@@ -100,11 +100,13 @@
             </div>
           </div>
         </div>
-        <div class="free">
+
+        <div class="free" @click="fun">
           <span>免费咨询</span>
         </div>
       </div>
       <hr>
+      <!-- 时间线 -->
       <div class="mask_box">
         <h2 class="title">无二之旅</h2>
         <h2 class="title">定制自由行旗舰品牌</h2>
@@ -113,17 +115,7 @@
         <p class="want">为你私人定制一次难忘的出国旅行。</p>
         <div class="timeline">
           <div class="left">
-            <div class="leftchild">
-              <div class="time special">2012一<span></span></div>
-             <div class="img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/logo.png" alt=""></div>
-             <div class="txt"><p class="want">无二之旅在北京成立</p></div>
-            </div>
-            <div class="leftchild">
-              <div class="time special">2012一<span></span></div>
-             <div class="img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/logo.png" alt=""></div>
-             <div class="txt"><p class="want">无二之旅在北京成立</p></div>
-            </div>
-            <div class="leftchild">
+            <div class="leftchild" v-for="n in 3" :key="n.id">
               <div class="time special">2012一<span></span></div>
              <div class="img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/logo.png" alt=""></div>
              <div class="txt"><p class="want">无二之旅在北京成立</p></div>
@@ -131,12 +123,7 @@
           </div>
           <div class="line"></div>
           <div class="right">
-            <div class="leftchild">
-              <div class="time special"><span></span>一2014.7</div>
-              <div class="img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/cctv.png" alt=""></div>
-              <div class="txt"><p class="want">无二之旅成为央视纪录片《旅行定制师》独家跟拍对象</p></div>
-            </div>
-            <div class="leftchild">
+            <div class="leftchild" v-for="n in 2" :key="n.id">
               <div class="time special"><span></span>一2014.7</div>
               <div class="img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/cctv.png" alt=""></div>
               <div class="txt"><p class="want">无二之旅成为央视纪录片《旅行定制师》独家跟拍对象</p></div>
@@ -153,19 +140,9 @@
       <p class="want">懂旅行，才能给你更好的旅行。</p>
       <div class="mask_flex">
         <div class="mask_flex_list">
-          <div class="maskchilk">
+          <div class="maskchilk" v-for="(n,i) in 3" :key="n.id">
             <div class="mask-img mask-bottom-img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/custom_person_one.jpg" alt=""></div>
-            <div class="mask-bottom" @click="maskTxt">
-              <div class="mask-bottom-list">
-                <div class="mask-bottom-title">定制师 大海</div>
-                <div class="mask-bottom-home">家住圣托里尼</div>
-                <div class="mask-bottom-txt">每年夏天我都要忙着采摘葡萄，还要制作浓烈的Raki酒，花园每天也要去整理，还要拉着那头蠢蠢的驴子去买蓝色油漆，橄榄也是要摘的，到了晚上，还要去那家约好的餐厅弹奏钢琴，餐厅的味道嘛，我可从来都不推荐给谁。</div>
-              </div>
-            </div>
-          </div>
-          <div  class="maskchilk">
-            <div class="mask-img mask-bottom-img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/custom_person_two.jpg" alt=""></div>
-            <div class="mask-bottom"@click="maskTxt">
+            <div class="mask-bottom" @click="maskTxt(n)">
               <div class="mask-bottom-list">
                 <div class="mask-bottom-title">定制师 大海</div>
                 <div class="mask-bottom-home">家住圣托里尼</div>
@@ -183,19 +160,7 @@
       <p class="want">定制旅行的感受，听听他们怎么说。</p>
       <div class="mask_flex">
         <div class="mask_flex_list">
-          <div class="maskchilk" @click="centerDialogVisible = true">
-            <div class="mask-img mask-bottom-img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/newzealand.png" alt=""></div>
-            <div class="mask-bottom">
-                <div class="mask-bottom-txt last-txt">我们已经回家了，谢谢你们的所有帮助，辛苦了。你们真的太专业了，越是到了国外越是对你们更佩服。路书中各种指示很全，中途的小插曲也能很好的帮我们搞定，谢谢所有人。下次自由行还需要你们！谢谢！</div>
-            </div>
-          </div>
-          <div class="maskchilk" @click="centerDialogVisible = true">
-            <div class="mask-img mask-bottom-img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/newzealand.png" alt=""></div>
-            <div class="mask-bottom">
-                <div class="mask-bottom-txt last-txt">我们已经回家了，谢谢你们的所有帮助，辛苦了。你们真的太专业了，越是到了国外越是对你们更佩服。路书中各种指示很全，中途的小插曲也能很好的帮我们搞定，谢谢所有人。下次自由行还需要你们！谢谢！</div>
-            </div>
-          </div>
-          <div class="maskchilk" @click="centerDialogVisible = true">
+          <div class="maskchilk" @click="centerDialogVisible = true" v-for="n in 3" :key="n.id">
             <div class="mask-img mask-bottom-img"><img src="https://assets.cdn.uniqueway.com/assets/img/welcome/custom/mobile/newzealand.png" alt=""></div>
             <div class="mask-bottom">
                 <div class="mask-bottom-txt last-txt">我们已经回家了，谢谢你们的所有帮助，辛苦了。你们真的太专业了，越是到了国外越是对你们更佩服。路书中各种指示很全，中途的小插曲也能很好的帮我们搞定，谢谢所有人。下次自由行还需要你们！谢谢！</div>
@@ -204,7 +169,6 @@
         </div>
       </div>
     </div>
-
     <el-dialog
       title=""
       :visible.sync="centerDialogVisible"
@@ -231,18 +195,24 @@
       }
     },
     methods:{
-      maskTxt () {
-        if (this.show==1) {
-          event.path[1].style.transform="all 2s";
-          event.path[1].style.transform="translateY(-60px)";
-          this.show = 2
-        }else if(this.show==2){
-          event.path[1].style.transform="all 2s";
-          event.path[1].style.transform="translateY(0px)";
-          this.show = 1
-        }
+      maskTxt (n) {
+       if(!event.path[1].hasAttribute("ref")){
+         event.path[1].style.transform="translateY(-60px)"
+         event.path[1].style.transition="all 1s"
+         event.path[1].setAttribute("ref","aa")
+       }else{
+         event.path[1].style.transform="translateY(0px)"
+         event.path[1].style.transition="all 1s"
+         event.path[1].removeAttribute("ref")
+       }
       },
-    }
+    },
+    methods:{
+      fun(){
+        this.consulting()
+      }
+    },
+    inject:['consulting'],
   }
 </script>
 
@@ -259,7 +229,6 @@
       border: none;
       background-color: #F0F0F0;
     }
-
     .mask_box{
       width: 95%;
       margin: auto;
@@ -338,6 +307,10 @@
         width: 1000px;
         display: flex;
         text-align: left;
+        .long{
+          transform:translateY(-60px);
+          transition:all 1s
+        }
       }
       .mask-top{
         width: 80%;
@@ -420,6 +393,11 @@
       position: relative;
       color: #C0BAB7;
       top: -49px;
+      .mask-bottom-list{
+        &>div{
+          margin-bottom: -2px;
+        }
+      }
       .mask-bottom-title{
         width: 40%;
         color: #63C6C2;

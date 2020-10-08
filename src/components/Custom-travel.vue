@@ -1,4 +1,5 @@
 <template>
+  <!-- 定制旅行 -->
   <div>
     <div class="custom-travel">
       <div class="banner2">
@@ -6,6 +7,7 @@
         <div>自由·省心·有保障，好的定制，可以不贵。</div>
       </div>
     </div>
+    <!-- 旅行团队 -->
     <Team></Team>
     <bottomNav></bottomNav>
     <content1></content1>

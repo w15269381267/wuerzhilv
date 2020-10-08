@@ -6,17 +6,19 @@
       </div>
       <div class="sec" v-for="n in 3" :key="n.id">
         <div class="img">
-          <swiper class="swiper-slide" ref="mySwiper" :options="swiperOptions">
-            <swiper-slide><img src="../../../static/Bali/place1-1.jpg" alt=""></swiper-slide>
-            <swiper-slide><img src="../../../static/Bali/place1-2.jpg" alt=""></swiper-slide>
-            <swiper-slide><img src="../../../static/Bali/place1-3.jpg" alt=""></swiper-slide>
-            <div class="swiper-pagination" slot="pagination"></div>
-            <!-- 分页器 -->
-            <div class="swiper-pagination"  slot="pagination"></div>
-            <!-- 左右箭头 -->
-            <div class="swiper-button-prev" slot="button-prev" @click="next"></div>
-            <div class="swiper-button-next" slot="button-next" @click="prev"></div>
-          </swiper>
+          <div class="block"><!-- 轮播图 -->
+              <el-carousel trigger="click" height="150px" :autoplay="false">
+                <el-carousel-item>
+                  <img src="../../../static/Bali/place1-1.jpg" alt="">
+                </el-carousel-item>
+                <el-carousel-item>
+                  <img src="../../../static/Bali/place1-2.jpg" alt="">
+                </el-carousel-item>
+                <el-carousel-item>
+                  <img src="../../../static/Bali/place1-3.jpg" alt="">
+                </el-carousel-item>
+              </el-carousel>
+            </div>
         </div>
         <div class="txt">
           <h3>悦榕庄白鸽教堂</h3>
@@ -26,48 +28,13 @@
           </p>
         </div>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
-  import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
-  import 'swiper/swiper-bundle.css'
   export default {
-    data(){
-      return{
-        swiperOptions: {
-          pagination: {
-            el: '.swiper-pagination'
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          },
-        }
-      }
-    },
-    components:{
-      Swiper,
-      SwiperSlide
-    },
-    directives: {
-      swiper: directive
-    },
-    computed:{
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
-    },
-    methods:{
-      prev(){
-        this.$refs.mySwiper.$swiper.slidePrev()
-      },
-      next(){
-        this.$refs.mySwiper.$swiper.slideNext()
-      },
-    }
+    
   }
 </script>
 
@@ -84,6 +51,7 @@
       .img{
         img{
           width: 90%;
+          margin: auto;
         }
       }
       .txt{

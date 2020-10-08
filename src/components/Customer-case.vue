@@ -1,4 +1,5 @@
 <template>
+  <!-- 客户案例 -->
   <div class="Custormer-case">
     <div class="Custormer-case-box">
      <div class="Custormer-case-box-head">
@@ -17,7 +18,6 @@
           感受他人的温度
         </div>
         </router-link>
-
       </div>
      </div>
     </div>

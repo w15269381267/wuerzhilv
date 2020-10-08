@@ -19,6 +19,10 @@ import about from "@/components/about.vue"
 import Bali from "@/components/Bali.vue"
 import Osaka from "@/components/Osaka.vue"
 import book from "@/components/book.vue"
+import aurora from "@/components/aurora.vue"
+import family from "@/components/family.vue"
+import CustomDivision from "@/components/Custom-division.vue"
+import CaiYun from "@/components/CaiYun.vue"
 
 Vue.use(Router)
 
@@ -120,6 +124,26 @@ export default new Router({
       path:"/book",
       name:"book",
       component: book
+    },
+    {
+      path:"/aurora",
+      name:"aurora",
+      component: aurora
+    },
+    {
+      path:"/family",
+      name:"family",
+      component: family
+    },
+    {
+      path:"/CustomDivision",
+      name:"CustomDivision",
+      component: CustomDivision
+    },
+    {
+      path:"/CaiYun",
+      name:"CaiYun",
+      component: CaiYun
     }
   ]
 })

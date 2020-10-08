@@ -52,6 +52,8 @@
             confirmButtonText:"ok",
             confirmButtonClass:"nobtn"
           })
+          this.phone2=""
+          this.destination2=""
         }
       }
     }

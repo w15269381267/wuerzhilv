@@ -13,10 +13,19 @@
         <span></span>
       </div>
       <div class="about-box-txt">
-        <p  v-for="n in txt" :key="n.id">{{n}}</p>
+
+        <div class="block">
+          <el-carousel trigger="click" height="450px" :autoplay="false">
+            <el-carousel-item v-for="item in 4" :key="item">
+              <p  v-for="n in txt" :key="n.id">{{n}}</p>
+            </el-carousel-item>
+          </el-carousel>
+        </div>
       </div>
+      <!-- 事件线 -->
       <timeLine></timeLine>
     </div>
+    <!-- 地图 -->
     <maps></maps>
     <bottomNav></bottomNav>
   </div>

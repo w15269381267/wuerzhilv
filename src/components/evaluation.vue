@@ -15,7 +15,7 @@
           <li>好玩不贵、有性价比 <span>(396)</span></li>
           <li><router-link to="/RoadBook">路书</router-link>写得好详细 <span>(598)</span></li>
           <li>非常棒的一次体验 <span>(175)</span></li>
-          <li><router-link to="">定制师</router-link>贴心、细心 <span>(294)</span></li>
+          <li><router-link to="/CustomDivision">定制师</router-link>贴心、细心 <span>(294)</span></li>
         </ul>
         <ul>
           <li @click="Japan">日本</li>
@@ -39,6 +39,7 @@
         </ul>
       </div>
     </div>
+    <!-- 留言板 -->
     <all :txt="alls"></all>
     <div class="block">
       <el-pagination

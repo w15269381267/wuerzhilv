@@ -5,7 +5,6 @@
       <wc-slide class="swiper"><img src="https://assets.cdn.uniqueway.com/mix/mip/images/home/banner2019-0730.png" alt=""></wc-slide>
     </wc-swiper>
     <nav class="box">
-
       <div class="trip-title">
         <router-link to="/CustomTravel" class="router-link">
           <h2>了解定制旅行<span></span></h2>
@@ -43,12 +42,12 @@
             蜜月旅行
           </div>
         </router-link>
-        <router-link  to="/honeymoon" class="recommend-theme-link">
+        <router-link  to="/aurora" class="recommend-theme-link">
           <div class="aurora">
             极光之旅
           </div>
         </router-link>
-        <router-link  to="/honeymoon" class="recommend-theme-link">
+        <router-link  to="/family" class="recommend-theme-link">
           <div class="family">
             亲自旅游
           </div>
@@ -112,7 +111,9 @@
       <router-link to="/evaluation">查看更多用于评价...</router-link>
     </section>
     <hr>
+    <!-- 目的地定制 -->
     <customized></customized>
+    <!-- 口号 -->
     <slogan></slogan>
     <bottomFform></bottomFform>
     <bottomNav></bottomNav>

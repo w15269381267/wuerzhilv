@@ -4,6 +4,7 @@
       <div class="header">
         <img src="/static/honeymoon/banner.jpg" alt="">
       </div>
+      <!-- 颜色分类 -->
       <colorBox></colorBox>
       <div class="Case-stories">
         <h2>案例故事</h2>

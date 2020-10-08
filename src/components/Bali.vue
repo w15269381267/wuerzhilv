@@ -1,4 +1,5 @@
 <template>
+  <!-- 巴厘岛 -->
   <div class="Bali">
     <div class="Bali-box">
       <div class="Bali-box-head">
@@ -18,7 +19,9 @@
           免费咨询
         </div>
       </div>
+      <!-- 教堂 -->
       <BaliSec></BaliSec>
+      <!-- 更多 -->
       <more></more>
       <bottomFform></bottomFform>
       <bottomNav></bottomNav>

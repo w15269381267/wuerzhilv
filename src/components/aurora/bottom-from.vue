@@ -2,9 +2,9 @@
   <div class="bottom-form">
     <form action="">
       <div class="step">
-        <img src="https://assets.cdn.uniqueway.com/assets/img/welcome/theme/honeymoon/white.png" alt="">
+        <img src="https://assets.cdn.uniqueway.com/assets/img/welcome/theme/aurora/mobile/icon_aurora.png" alt="">
       </div>
-      <h2>定制属于自己的蜜月旅行</h2>
+      <h2>免费咨询极光旅行</h2>
       <div class="ipt">
         <input type="text" placeholder="姓名" v-model="phone2">
         <input type="text" placeholder="手机" v-model="destination2">
@@ -65,7 +65,7 @@
   .bottom-form{
     width: 100%;
     min-height: 25rem;
-    background-image: url(/static/honeymoon/bg.jpg);
+    background-image: url(../../../static/index/mobile_bottom_form.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     form{
@@ -97,9 +97,9 @@
       .sub{
         width: 50%;
         height: 40px;
-        border-radius: 20px;
+        border-radius: 5px;
         border: none;
-        background-color: #63C6C2;
+        background-image: linear-gradient(90deg,#1af0ff,#6bdb0a);
         color: #fff;
         outline: none;
         font-size: 1.5625rem;

@@ -12,13 +12,14 @@
           </div>
         </div>
       </div>
-      <div class="more-box-sec" v-for="n in 4" :key="n.id">
+      <div class="more-box-sec" >
         <div class="title">
           更多海外婚礼
         </div>
-        <div class="img-flex">
-          <div class="img"><img src="../../../static/Bali/bali-min.jpg" alt=""><p>巴厘岛婚礼</p></div>
-          <div class="img"><img src="../../../static/Bali/iceland-min.jpg" alt=""><p>冰岛婚礼</p></div>
+        <div class="img-flex" v-for="n in 4" :key="n.id">
+          <div class="img"><router-link to="/Bali"><img src="../../../static/Bali/bali-min.jpg" alt=""></router-link>
+          <p>巴厘岛婚礼</p></div>
+          <div class="img"><router-link to="/Bali"><img src="../../../static/Bali/iceland-min.jpg" alt=""></router-link><p>冰岛婚礼</p></div>
         </div>
       </div>
       <div class="more-box-btm">
@@ -71,6 +72,7 @@
         }
         .img-flex{
           width: 90%;
+          padding: 10px;
           margin: auto;
           display: flex;
           justify-content: space-between;
