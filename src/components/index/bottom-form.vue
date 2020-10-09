@@ -11,7 +11,7 @@
       <div class="ipt">
         <input type="text" placeholder="请填写手机号" v-model="phone2">
         <input type="text" placeholder="请填写目的地" v-model="destination2">
-        <textarea placeholder="你的旅行要求"></textarea>
+        <textarea placeholder="你的旅行要求" v-model="beizhu"></textarea>
       </div>
       <div class="btn">
         <button class="sub" @click="subBtn2">提交要求</button>
@@ -29,7 +29,8 @@
     data(){
       return {
         phone2:"",
-        destination2:""
+        destination2:"",
+        beizhu:""
       }
     },
     methods:{
@@ -54,6 +55,7 @@
           })
           this.phone2=""
           this.destination2=""
+          this.beizhu=""
         }
       }
     }

@@ -26,7 +26,6 @@
     },
     methods:{
       subBtn () {
-        console.log(this.destination)
         if (!this.destination) {
           this.$alert("目的地不能为空",{
             center:true,

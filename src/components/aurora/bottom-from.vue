@@ -8,7 +8,7 @@
       <div class="ipt">
         <input type="text" placeholder="姓名" v-model="phone2">
         <input type="text" placeholder="手机" v-model="destination2">
-        <textarea placeholder="备注内容"></textarea>
+        <textarea placeholder="备注内容" v-model="beizhu"></textarea>
       </div>
       <div class="btn">
         <button class="sub" @click="subBtn2">免费咨询</button>
@@ -26,7 +26,8 @@
     data(){
       return {
         phone2:"",
-        destination2:""
+        destination2:"",
+        beizhu:""
       }
     },
     methods:{
@@ -51,6 +52,7 @@
           })
           this.phone2=""
           this.destination2=""
+          this.beizhu=""
         }
       }
     }
